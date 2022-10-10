@@ -14,10 +14,11 @@ public class App extends Application
 {
 	
 	/**
+	 * je sui shdhqekgqfkhqskghkqsufhu kjfhzakjgfjkqsg boom
 	 * En javafx start() lance l'application
 	 *
 	 * On cree le SceneGraph de l'application ici
-	 * @see http://docs.oracle.com/javafx/2/scenegraph/jfxpub-scenegraph.htm
+	 * @see "http://docs.oracle.com/javafx/2/scenegraph/jfxpub-scenegraph.htm"
 	 * 
 	 */
 	@Override
