@@ -15,10 +15,10 @@ public class App extends Application
 	
 	/**
 	 * En javafx start() lance l'application
-	 *
+	 * test de git jhgqdjfjhfqdshfkghsqgkjqhskjghkjlqshkjlghkjqshoi,xoiceoisoqcyoirhghvqshvglnsdoiyhvoiyhu
 	 * On cree le SceneGraph de l'application ici
 	 * @see "http://docs.oracle.com/javafx/2/scenegraph/jfxpub-scenegraph.htm"
-	 * 
+	 * alors la zone ca dit quoi ???? alors la zone ca dit quoi ????
 	 */
 	@Override
 	public void start(Stage stage) throws Exception 

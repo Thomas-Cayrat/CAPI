@@ -70,7 +70,7 @@ public class Player
         // step = randomGenerator.nextFloat();
 
         // Pour commencer les joueurs ont une vitesse / un pas fixe
-        step = 1;
+        step = 3;
 	    
 	  }
 
