@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class App extends Application 
 {
 
-	origin/main/**
+	/**
 	 * je sui shdhqekgqfkhqskghkqsufhu kjfhzakjgfjkqsg boom
 	 * En javafx start() lance l'application
 	 *
