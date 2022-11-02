@@ -50,11 +50,11 @@ public class Field extends Canvas {
         
         /** On initialise le terrain de jeu */
 
-		joueurs[0] = new Player(gc, colorMap[0], w/2, h-50, "bottom");
+		joueurs[0] = new Player(gc, colorMap[0], w/2, h-100, "bottom");
     	joueurs[0].display();
-		joueurs[1] = new Ordi(gc, colorMap[1], w/4, h-50, "bottom");
+		joueurs[1] = new Ordi(gc, colorMap[1], w/4, h-100, "bottom");
 		joueurs[1].display();
-		joueurs[2] = new Ordi(gc, colorMap[2], 3*w/4, h-50, "bottom");
+		joueurs[2] = new Ordi(gc, colorMap[2], 3*w/4, h-100, "bottom");
 		joueurs[2].display();
 		teamRed.add(joueurs[0]);
 		teamRed.add(joueurs[1]);
@@ -161,12 +161,12 @@ public class Field extends Canvas {
 	        			joueurs[i].shoot();
 					}
 					joueurs[i].stayInField(); //garde les joueurs dans le field
-
+					joueurs[i].goodSideArrow();
 	        		
 	        		joueurs[i].display();
 	    	    }
-				//System.out.println(joueurs[3].getAngle());
-				System.out.println(joueurs[3].getX());
+				System.out.println(joueurs[0].getAngle());
+				//System.out.println(joueurs[3].getX());
 
 	    	}
 

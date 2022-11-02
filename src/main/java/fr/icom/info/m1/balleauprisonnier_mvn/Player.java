@@ -121,23 +121,8 @@ public class Player
 		}
 	  }
 
-	/**
-	 * Garde les joueurs sur le Field
-	 */
-	public void stayInField(){
-		  if (x < 10) {
-			  spriteAnimate();
-			  x += step;
-		  }
-		  if (x > 520){
-			  spriteAnimate();
-			  x -= step;
-		  }
-	  }
 
-	  public void goodSideArrow(){
 
-	  }
 
 	  /**
 	   *  Deplacement du joueur vers la droite
@@ -154,6 +139,19 @@ public class Player
 		}
 
 	  }
+	/**
+	 * Garde les joueurs sur le Field
+	 */
+	public void stayInField(){
+		if (x < 10) {
+			spriteAnimate();
+			x += step;
+		}
+		if (x > 520){
+			spriteAnimate();
+			x -= step;
+		}
+	}
 
 	  
 	  /**
@@ -186,6 +184,16 @@ public class Player
 	    }
 	  }
 
+	public void goodSideArrow(){
+		if (angle < -90)
+		{
+			angle += 1;
+		}
+		if (angle > 90){
+			angle -= 1;
+		}
+
+	}
 
 	  void shoot(){
 	  	sprite.playShoot();
