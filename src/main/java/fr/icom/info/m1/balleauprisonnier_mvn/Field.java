@@ -18,12 +18,13 @@ import javafx.scene.paint.Color;
 public class Field extends Canvas {
 	
 	/** Joueurs */
-	Player [] joueurs = new Player[2];
+	Player [] joueurs = new Player[6];
 	/** Couleurs possibles */
 	String[] colorMap = new String[] {"blue", "green", "orange", "purple", "yellow"};
 	/** Tableau traçant les evenements */
     ArrayList<String> input = new ArrayList<String>();
-    
+    ArrayList team1 = new ArrayList();
+	ArrayList team2 = new ArrayList();
 
     final GraphicsContext gc;
     final int width;
@@ -48,12 +49,26 @@ public class Field extends Canvas {
         gc = this.getGraphicsContext2D();
         
         /** On initialise le terrain de jeu */
-    	joueurs[0] = new Player(gc, colorMap[0], w/2, h-50, "bottom");
+
+		joueurs[0] = new Player(gc, colorMap[0], w/2, h-50, "bottom");
     	joueurs[0].display();
+		joueurs[1] = new Player(gc, colorMap[1], w/4, h-50, "bottom");
+		joueurs[1].display();
+		joueurs[2] = new Player(gc, colorMap[2], 3*w/4, h-50, "bottom");
+		joueurs[2].display();
+		team1.add(joueurs[0]);
+		team1.add(joueurs[1]);
+		team1.add(joueurs[2]);
 
-    	joueurs[1] = new Player(gc, colorMap[1], w/2, 20, "top");
-    	joueurs[1].display();
-
+		joueurs[3] = new Player(gc, colorMap[0], w/2, 20, "top");
+		joueurs[3].display();
+		joueurs[4] = new Player(gc, colorMap[1], w/4, 20, "top");
+		joueurs[4].display();
+		joueurs[5] = new Player(gc, colorMap[2], 3*w/4, 20, "top");
+		joueurs[5].display();
+		team1.add(joueurs[3]);
+		team1.add(joueurs[4]);
+		team1.add(joueurs[5]);
 
 	    /** 
 	     * Event Listener du clavier 
@@ -125,23 +140,23 @@ public class Field extends Canvas {
 					if (i==0 && input.contains("M")){
 						joueurs[i].shoot();
 					}
-	        		if (i==1 && input.contains("Q"))
+	        		if (i==3 && input.contains("Q"))
 	        		{
 	        			joueurs[i].moveLeft();
 	        		} 
-	        		if (i==1 && input.contains("D")) 
+	        		if (i==3 && input.contains("D"))
 	        		{
 	        			joueurs[i].moveRight();	        			
 	        		}
-	        		if (i==1 && input.contains("Z"))
+	        		if (i==3 && input.contains("Z"))
 	        		{
 	        			joueurs[i].turnLeft();
 	        		} 
-	        		if (i==1 && input.contains("S")) 
+	        		if (i==3 && input.contains("S"))
 	        		{
 	        			joueurs[i].turnRight();	        			
 	        		}
-	        		if (i==1 && input.contains("SPACE")){
+	        		if (i==3 && input.contains("SPACE")){
 	        			joueurs[i].shoot();
 					}
 
