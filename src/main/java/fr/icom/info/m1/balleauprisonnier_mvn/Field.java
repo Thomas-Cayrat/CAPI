@@ -23,8 +23,8 @@ public class Field extends Canvas {
 	String[] colorMap = new String[] {"blue", "green", "orange", "purple", "yellow"};
 	/** Tableau traçant les evenements */
     ArrayList<String> input = new ArrayList<String>();
-    ArrayList team1 = new ArrayList();
-	ArrayList team2 = new ArrayList();
+    ArrayList teamRed = new ArrayList();
+	ArrayList teamBlue = new ArrayList();
 
     final GraphicsContext gc;
     final int width;
@@ -52,23 +52,24 @@ public class Field extends Canvas {
 
 		joueurs[0] = new Player(gc, colorMap[0], w/2, h-50, "bottom");
     	joueurs[0].display();
-		joueurs[1] = new Player(gc, colorMap[1], w/4, h-50, "bottom");
+		joueurs[1] = new Ordi(gc, colorMap[1], w/4, h-50, "bottom");
 		joueurs[1].display();
-		joueurs[2] = new Player(gc, colorMap[2], 3*w/4, h-50, "bottom");
+		joueurs[2] = new Ordi(gc, colorMap[2], 3*w/4, h-50, "bottom");
 		joueurs[2].display();
-		team1.add(joueurs[0]);
-		team1.add(joueurs[1]);
-		team1.add(joueurs[2]);
+		teamRed.add(joueurs[0]);
+		teamRed.add(joueurs[1]);
+		teamRed.add(joueurs[2]);
 
 		joueurs[3] = new Player(gc, colorMap[0], w/2, 20, "top");
 		joueurs[3].display();
-		joueurs[4] = new Player(gc, colorMap[1], w/4, 20, "top");
+		joueurs[4] = new Ordi(gc, colorMap[1], w/4, 20, "top");
 		joueurs[4].display();
-		joueurs[5] = new Player(gc, colorMap[2], 3*w/4, 20, "top");
+		joueurs[5] = new Ordi(gc, colorMap[2], 3*w/4, 20, "top");
 		joueurs[5].display();
-		team1.add(joueurs[3]);
-		team1.add(joueurs[4]);
-		team1.add(joueurs[5]);
+		teamBlue.add(joueurs[3]);
+		teamBlue.add(joueurs[4]);
+		teamBlue.add(joueurs[5]);
+
 
 	    /** 
 	     * Event Listener du clavier 
@@ -172,3 +173,4 @@ public class Field extends Canvas {
 		return joueurs;
 	}
 }
+
