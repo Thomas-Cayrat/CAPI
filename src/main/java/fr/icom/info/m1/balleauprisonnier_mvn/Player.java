@@ -6,7 +6,6 @@ import javafx.scene.transform.Rotate;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
-import java.util.Random;
 
 /**
  * 
@@ -75,7 +74,13 @@ public class Player
 	    
 	  }
 
-	  /**
+	/**
+	 * getter angle
+	 */
+	public double getAngle(){
+		return this.angle;
+	}
+	/**
 	   *  Affichage du joueur
 	   */
 	  void display()
@@ -122,12 +127,12 @@ public class Player
 	   */
 	  void turnLeft() 
 	  {
-	    if (angle > 0 && angle < 180) 
+	    if (angle >= -90 && angle <= 90)
 	    {
 	    	angle += 1;
 	    }
 	    else {
-	    	angle += 1;
+	    	angle -= 1;
 	    }
 
 	  }
@@ -138,12 +143,12 @@ public class Player
 	   */
 	  void turnRight() 
 	  {
-	    if (angle > 0 && angle < 180) 
+	    if (angle >= -90 && angle <= 90)
 	    {
 	    	angle -=1;
 	    }
 	    else {
-	    	angle -= 1;
+	    	angle += 1;
 	    }
 	  }
 

@@ -164,8 +164,10 @@ public class Field extends Canvas {
 	        		
 	        		joueurs[i].display();
 	    	    }
+				System.out.println(joueurs[3].getAngle());
 	    	}
-	     }.start(); // On lance la boucle de rafraichissement 
+
+	     }.start(); // On lance la boucle de rafraichissement
 	     
 	}
 
