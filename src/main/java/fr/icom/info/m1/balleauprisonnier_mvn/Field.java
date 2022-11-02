@@ -160,11 +160,14 @@ public class Field extends Canvas {
 	        		if (i==3 && input.contains("SPACE")){
 	        			joueurs[i].shoot();
 					}
+					joueurs[i].stayInField(); //garde les joueurs dans le field
 
 	        		
 	        		joueurs[i].display();
 	    	    }
-				System.out.println(joueurs[3].getAngle());
+				//System.out.println(joueurs[3].getAngle());
+				System.out.println(joueurs[3].getX());
+
 	    	}
 
 	     }.start(); // On lance la boucle de rafraichissement

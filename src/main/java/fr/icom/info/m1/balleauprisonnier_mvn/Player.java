@@ -69,8 +69,8 @@ public class Player
         // Random randomGenerator = new Random();
         // step = randomGenerator.nextFloat();
 
-        // Pour commencer les joueurs ont une vitesse qui est generé automatiquement entre 1 et 10
-        step = Math.floor(Math.random()*(10-1+1)+1);
+        // Pour commencer les joueurs ont une vitesse qui est generé automatiquement entre 1 et 5
+        step = Math.floor(Math.random()*(5-1+1)+1);
 	    
 	  }
 
@@ -80,6 +80,15 @@ public class Player
 	public double getAngle(){
 		return this.angle;
 	}
+
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
 	/**
 	   *  Affichage du joueur
 	   */
@@ -102,11 +111,32 @@ public class Player
 	 
 	  void moveLeft() 
 	  {	    
-	    if (x > 10 && x < 520) 
+	    if (x >= 10 && x <= 520)
 	    {
 			spriteAnimate();
 		    x -= step;
-	    }
+		}else{
+			spriteAnimate();
+			x += step;
+		}
+	  }
+
+	/**
+	 * Garde les joueurs sur le Field
+	 */
+	public void stayInField(){
+		  if (x < 10) {
+			  spriteAnimate();
+			  x += step;
+		  }
+		  if (x > 520){
+			  spriteAnimate();
+			  x -= step;
+		  }
+	  }
+
+	  public void goodSideArrow(){
+
 	  }
 
 	  /**
@@ -114,11 +144,15 @@ public class Player
 	   */
 	  void moveRight() 
 	  {
-	    if (x > 10 && x < 520) 
+	    if (x >= 10 && x <= 520)
 	    {
 			spriteAnimate();
 		    x += step;
-	    }
+	    }else{
+			spriteAnimate();
+			//x -= step;
+		}
+
 	  }
 
 	  
