@@ -196,7 +196,8 @@ public class Player
 	}
 
 	  void shoot(){
-	  	sprite.playShoot();
+		  sprite.playShoot();
+		  Projectile ball = new Projectile(1,1,10,20);
 	  }
 	  
 	  /**
