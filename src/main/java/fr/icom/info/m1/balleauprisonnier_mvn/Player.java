@@ -26,6 +26,7 @@ public class Player
 	  ImageView PlayerDirectionArrow;
 	  
 	  GraphicsContext graphicsContext;
+
 	  
 	  /**
 	   * Constructeur du Joueur
@@ -40,7 +41,7 @@ public class Player
 	    x = xInit;               
 	    y = yInit;
 	    graphicsContext = gc;
-	    playerColor=color;
+	    playerColor = color;
 	    
 	    angle = 0;
 
@@ -59,11 +60,12 @@ public class Player
         PlayerDirectionArrow.setSmooth(true);
         PlayerDirectionArrow.setCache(true);
 
-        Image tilesheetImage = new Image("assets/orc.png");
+
+		Image tilesheetImage = new Image("assets/orc.png");
         sprite = new Sprite(tilesheetImage, 0,0, Duration.seconds(.2), side);
         sprite.setX(x);
         sprite.setY(y);
-        //directionArrow = sprite.getClip().;
+        //directionArrow = sprite.getClip();
 
 	    // Tous les joueurs ont une vitesse aleatoire entre 0.0 et 1.0
         // Random randomGenerator = new Random();
@@ -197,7 +199,7 @@ public class Player
 
 	  void shoot(){
 		  sprite.playShoot();
-		  Projectile ball = new Projectile(1,1,10,20);
+
 	  }
 	  
 	  /**

@@ -30,8 +30,18 @@ public class App extends Application
         // On cree le terrain de jeu et on l'ajoute a la racine de la scene
         Field gameField = new Field(scene, 600, 600 );
         root.getChildren().add( gameField );
+		/*for (int i = 0 ; i < gameField.getJoueurs().length() ; i++){
+			if (joueurs[i].color() == 'red'){
+
+			}
+		}*/
 		root.getChildren().add(gameField.getJoueurs()[0].sprite);
 		root.getChildren().add(gameField.getJoueurs()[1].sprite);
+		root.getChildren().add(gameField.getJoueurs()[2].sprite);
+		root.getChildren().add(gameField.getJoueurs()[3].sprite);
+		root.getChildren().add(gameField.getJoueurs()[4].sprite);
+		root.getChildren().add(gameField.getJoueurs()[5].sprite);
+
 
         // On ajoute la scene a la fenetre et on affiche
         stage.setScene( scene );

@@ -18,9 +18,10 @@ import javafx.scene.paint.Color;
 public class Field extends Canvas {
 	
 	/** Joueurs */
-	Player [] joueurs = new Player[6];
+	public Player [] joueurs = new Player[6];
+	Projectile [] Ball = new Projectile[1];
 	/** Couleurs possibles */
-	String[] colorMap = new String[] {"blue", "green", "orange", "purple", "yellow"};
+	String[] colorMap = new String[] {"red", "blue", "green", "orange", "purple", "yellow"};
 	/** Tableau traçant les evenements */
     ArrayList<String> input = new ArrayList<String>();
     ArrayList teamRed = new ArrayList();
@@ -52,24 +53,25 @@ public class Field extends Canvas {
 
 		joueurs[0] = new Player(gc, colorMap[0], w/2, h-100, "bottom");
     	joueurs[0].display();
-		joueurs[1] = new Ordi(gc, colorMap[1], w/4, h-100, "bottom");
+		joueurs[1] = new Ordi(gc, colorMap[0], w/4, h-100, "bottom");
 		joueurs[1].display();
-		joueurs[2] = new Ordi(gc, colorMap[2], 3*w/4, h-100, "bottom");
+		joueurs[2] = new Ordi(gc, colorMap[0], 3*w/4, h-100, "bottom");
 		joueurs[2].display();
 		teamRed.add(joueurs[0]);
 		teamRed.add(joueurs[1]);
 		teamRed.add(joueurs[2]);
 
-		joueurs[3] = new Player(gc, colorMap[0], w/2, 20, "top");
+		joueurs[3] = new Player(gc, colorMap[1], w/2, 20, "top");
 		joueurs[3].display();
 		joueurs[4] = new Ordi(gc, colorMap[1], w/4, 20, "top");
 		joueurs[4].display();
-		joueurs[5] = new Ordi(gc, colorMap[2], 3*w/4, 20, "top");
+		joueurs[5] = new Ordi(gc, colorMap[1], 3*w/4, 20, "top");
 		joueurs[5].display();
 		teamBlue.add(joueurs[3]);
 		teamBlue.add(joueurs[4]);
 		teamBlue.add(joueurs[5]);
 
+		Ball[0] = new Projectile(10,10,250,250);
 
 	    /** 
 	     * Event Listener du clavier 
@@ -159,13 +161,15 @@ public class Field extends Canvas {
 	        		}
 	        		if (i==3 && input.contains("SPACE")){
 	        			joueurs[i].shoot();
+						Projectile ball = new Projectile(1,1,20,20);
 					}
+
 					joueurs[i].stayInField(); //garde les joueurs dans le field
-					joueurs[i].goodSideArrow();
+					joueurs[i].goodSideArrow(); //garde la fleche du bon côté
 	        		
 	        		joueurs[i].display();
 	    	    }
-				System.out.println(joueurs[0].getAngle());
+				//System.out.println(joueurs[0].getAngle());
 				//System.out.println(joueurs[3].getX());
 
 	    	}

@@ -6,6 +6,7 @@ import java.io.InputStream;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -16,6 +17,7 @@ public class Projectile {
     int x;
     int y;
     Image img;
+
 
     Projectile(int s, int dir, int a, int b){
         Image img = new Image("assets/ball.png");
@@ -33,4 +35,6 @@ public class Projectile {
         imageView.setFitWidth(575);
         imageView.setPreserveRatio(true);
     }
+
+
 }
