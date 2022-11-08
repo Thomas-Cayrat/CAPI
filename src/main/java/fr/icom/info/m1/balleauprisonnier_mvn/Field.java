@@ -127,10 +127,14 @@ public class Field extends Canvas {
 	        		if (i==0 && input.contains("LEFT"))
 	        		{
 	        			joueurs[i].moveLeft();
+						joueurs[i+4].moveLeft();
+						joueurs[i+5].moveLeft();
 	        		} 
 	        		if (i==0 && input.contains("RIGHT")) 
 	        		{
-	        			joueurs[i].moveRight();	        			
+	        			joueurs[i].moveRight();
+						joueurs[i+4].moveRight();
+						joueurs[i+5].moveRight();
 	        		}
 	        		if (i==0 && input.contains("UP"))
 	        		{
@@ -140,17 +144,23 @@ public class Field extends Canvas {
 	        		{
 	        			joueurs[i].turnRight();	        			
 	        		}
-					if (i==0 && input.contains("M")){
+					if (i==0 && input.contains("M")) {
 						joueurs[i].shoot();
+						joueurs[i + 4].shoot();
+						joueurs[i + 5].shoot();
 					}
 	        		if (i==3 && input.contains("Q"))
 	        		{
 	        			joueurs[i].moveLeft();
+						joueurs[i-1].moveLeft();
+						joueurs[i-2].moveLeft();
 	        		} 
 	        		if (i==3 && input.contains("D"))
 	        		{
-	        			joueurs[i].moveRight();	        			
-	        		}
+	        			joueurs[i].moveRight();
+						joueurs[i-1].moveRight();
+						joueurs[i-2].moveRight();
+					}
 	        		if (i==3 && input.contains("Z"))
 	        		{
 	        			joueurs[i].turnLeft();
@@ -161,6 +171,8 @@ public class Field extends Canvas {
 	        		}
 	        		if (i==3 && input.contains("SPACE")){
 	        			joueurs[i].shoot();
+						joueurs[i-1].shoot();
+						joueurs[i-2].shoot();
 						Projectile ball = new Projectile(1,1,20,20);
 					}
 
