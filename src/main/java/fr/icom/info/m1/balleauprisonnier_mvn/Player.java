@@ -22,9 +22,10 @@ public class Player
 	  
 	  // On une image globale du joueur 
 	  Image directionArrow;
+	  Image SkinPlayer;
 	  Sprite sprite;
 	  ImageView PlayerDirectionArrow;
-	  
+
 	  GraphicsContext graphicsContext;
 
 	  
@@ -61,19 +62,28 @@ public class Player
         PlayerDirectionArrow.setCache(true);
 
 
-		Image tilesheetImage = new Image("assets/orc.png");
-        sprite = new Sprite(tilesheetImage, 0,0, Duration.seconds(.2), side);
-        sprite.setX(x);
-        sprite.setY(y);
-        //directionArrow = sprite.getClip();
+		  Image tilesheetImage ;
 
-	    // Tous les joueurs ont une vitesse aleatoire entre 0.0 et 1.0
+		  //directionArrow = sprite.getClip();
+
+	    // Tous les joueurs ont une vitesse aleatoire entre 1.0 et 5.0
         // Random randomGenerator = new Random();
         // step = randomGenerator.nextFloat();
 
         // Pour commencer les joueurs ont une vitesse qui est generé automatiquement entre 1 et 5
         step = Math.floor(Math.random()*(5-1+1)+1);
-	    
+
+		  if(side=="top"){
+			  tilesheetImage = new Image("assets/PlayerRed.png");
+		  }
+		  else{
+			  tilesheetImage = new Image("assets/PlayerBlue.png");
+		  }
+		  sprite = new Sprite(tilesheetImage, 0,0, Duration.seconds(.2), side);
+		  sprite.setX(x);
+		  sprite.setY(y);
+
+
 	  }
 
 	/**
