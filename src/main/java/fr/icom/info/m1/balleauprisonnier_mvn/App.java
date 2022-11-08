@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.paint.Color;
 
 /**
  * Classe principale de l'application 
@@ -30,11 +31,7 @@ public class App extends Application
         // On cree le terrain de jeu et on l'ajoute a la racine de la scene
         Field gameField = new Field(scene, 600, 600 );
         root.getChildren().add( gameField );
-		/*for (int i = 0 ; i < gameField.getJoueurs().length() ; i++){
-			if (joueurs[i].color() == 'red'){
 
-			}
-		}*/
 		root.getChildren().add(gameField.getJoueurs()[0].sprite);
 		root.getChildren().add(gameField.getJoueurs()[1].sprite);
 		root.getChildren().add(gameField.getJoueurs()[2].sprite);
@@ -46,6 +43,8 @@ public class App extends Application
         // On ajoute la scene a la fenetre et on affiche
         stage.setScene( scene );
         stage.show();
+
+
 	}
 	
     public static void main(String[] args) 

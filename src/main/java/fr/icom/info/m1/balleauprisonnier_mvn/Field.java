@@ -174,6 +174,7 @@ public class Field extends Canvas {
 						joueurs[i-1].shoot();
 						joueurs[i-2].shoot();
 						Projectile ball = new Projectile(1,1,20,20);
+						System.out.println(ball.getX());
 					}
 
 					joueurs[i].stayInField(); //garde les joueurs dans le field
@@ -183,6 +184,7 @@ public class Field extends Canvas {
 	    	    }
 				//System.out.println(joueurs[0].getAngle());
 				//System.out.println(joueurs[3].getX());
+
 
 	    	}
 

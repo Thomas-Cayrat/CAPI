@@ -29,5 +29,7 @@ public class Projectile {
 
     }
 
-
+    public int getX(){
+        return x;
+    }
 }
