@@ -11,7 +11,8 @@ Les joueurs peuvent se déplacer verticalement (à une vitesse aléatoire fixé 
 et contrôler l'angle de tir sur un arc de cercle de 180° devant le joueur.
 Prochainement, tirer la balle, la balle allant dans la direction du joueur, si en contact avec un joueur adverse : 
 receptionner et se faire toucher par la balle.
-Ou encore un score des points du match.
+Ou encore un score des points du match et 
+un agencement du projet en pattern MVC avec un singleton pour créer les Joueurs et une Factory pour création des balles.
 
 ## Installation
 
