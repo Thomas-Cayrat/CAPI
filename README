@@ -23,9 +23,10 @@ Actuellement, CAPI est encore sous la forme d'un projet IntelliJ
 ## Feuille de route
 
 Extensions possible pour le projet :
+ - Implémenter des rebonds de balles sur les murs
  - Modification du nombre de joueurs par équipe
- - Mettre une limite de point pour avoir une équipe vainqueur
- - Une fenêtre de Menu contenant "Pause", "Réinitialiser la partie", "Réglage son", "Réglage FPS", "Quitter".
+ - Mettre une limite de points pour avoir une équipe vainqueur
+ - Une fenêtre de Menu contenant "Pause", "Réinitialiser la partie", "Réglage audio", "Réglage visuel", "Quitter".
  
  ## Auteurs et Remerciements
  
