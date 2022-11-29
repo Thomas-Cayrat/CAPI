@@ -7,6 +7,8 @@ Codé depuis JavaFx dans le cadre d'un projet Universitaire.
 
 CAPI se présente sous la forme d'un jeu de Balle au Prisonnier multijoueur (en cours de finition).
 Chaque équipe contient 1 joueur et 2 bots controlés par ordinateur.
+Les Joueurs étant un objet de la classe Player, contrôlés par l'utilisateur.
+Les ordinateurs ayant hérité de la classe Player avec seul modifications qu’ils sont contrôlés aléatoirement.
 Les joueurs peuvent se déplacer horizontalement (à une vitesse aléatoire fixée au lancement de l'application) 
 et contrôler l'angle de tir sur un arc de cercle de 180° devant le joueur.
 Prochainement, tirer la balle, la balle allant dans la direction du joueur, si en contact avec un joueur adverse : 
