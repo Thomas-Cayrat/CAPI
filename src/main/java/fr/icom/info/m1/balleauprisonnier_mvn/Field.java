@@ -1,6 +1,5 @@
 package fr.icom.info.m1.balleauprisonnier_mvn;
 
-
 import java.util.ArrayList;
 
 import javafx.animation.AnimationTimer;
