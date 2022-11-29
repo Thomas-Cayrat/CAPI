@@ -6,7 +6,7 @@ public class Ordi extends Player {
     private boolean ia;
 
     /**
-     * Constructeur du Joueur
+     * Constructeur du Ordi
      *
      * @param gc    ContextGraphic dans lequel on va afficher le joueur
      * @param color couleur du joueur

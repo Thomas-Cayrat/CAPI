@@ -64,11 +64,6 @@ public class Player
 
 		  Image tilesheetImage ;
 
-		  //directionArrow = sprite.getClip();
-
-	    // Tous les joueurs ont une vitesse aleatoire entre 1.0 et 5.0
-        // Random randomGenerator = new Random();
-        // step = randomGenerator.nextFloat();
 
         // Pour commencer les joueurs ont une vitesse qui est generé automatiquement entre 1 et 5
         step = Math.floor(Math.random()*(5-1+1)+1);
@@ -196,6 +191,9 @@ public class Player
 	    }
 	  }
 
+	/**
+	 *  Garde la fleche dans l'arc de cercle
+	 */
 	public void goodSideArrow(){
 		if (angle < -90)
 		{
@@ -207,10 +205,13 @@ public class Player
 
 	}
 
-	  void shoot(){
+	/**
+	 * Joue l'animation de shoot
+	 */
+	void shoot(){
 		  sprite.playShoot();
 
-	  }
+	}
 	  
 	  /**
 	   *  Deplacement en mode boost

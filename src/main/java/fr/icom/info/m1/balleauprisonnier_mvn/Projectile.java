@@ -2,10 +2,9 @@ package fr.icom.info.m1.balleauprisonnier_mvn;
 
 
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.transform.Rotate;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.util.Duration;
+
 
 
 public class Projectile {
@@ -22,6 +21,9 @@ public class Projectile {
 
     GraphicsContext graphicsContext;
 
+    /**
+     * Constructeur du projectile
+     */
     Projectile(GraphicsContext gc,String color, int s, double dir, double a, double b){
         this.img = new Image("assets/ball.png"); //crée image
         this.speed = s;
@@ -42,10 +44,9 @@ public class Projectile {
     }
 
 
-    public double getX(){
-        return x;
-    }
-
+    /**
+     * Affiche le projectile
+     */
     public void display()
     {
         graphicsContext.save(); // saves the current state on stack, including the current transform
@@ -53,6 +54,9 @@ public class Projectile {
         graphicsContext.restore(); // back to original state (before rotation)
     }
 
+    /**
+     * Update les données du projectile
+     */
     public void update(){
         if (this.side == "blue") {
             this.x += Math.cos(this.directionRad) * this.speed;
