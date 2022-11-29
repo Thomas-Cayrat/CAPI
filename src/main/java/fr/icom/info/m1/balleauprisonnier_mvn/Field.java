@@ -19,7 +19,9 @@ public class Field extends Canvas {
 	
 	/** Joueurs */
 	public Player [] joueurs = new Player[6];
-	Projectile [] Ball = new Projectile[1];
+
+	/** Balle */
+	Projectile [] ball = new Projectile[10];
 	/** Couleurs possibles */
 	String[] colorMap = new String[] {"red", "blue", "green", "orange", "purple", "yellow"};
 	/** Tableau traçant les evenements */
@@ -71,8 +73,8 @@ public class Field extends Canvas {
 		teamBlue.add(joueurs[4]);
 		teamBlue.add(joueurs[5]);
 
-		Ball[0] = new Projectile(gc,10,10,250,250);
-
+		//ball[0] = new Projectile(gc,10,10,30,20);
+		//ball[0].display();
 	    /** 
 	     * Event Listener du clavier 
 	     * quand une touche est pressee on la rajoute a la liste d'input
@@ -173,15 +175,22 @@ public class Field extends Canvas {
 	        			joueurs[i].shoot();
 						joueurs[i-1].shoot();
 						joueurs[i-2].shoot();
-						Projectile ball = new Projectile(gc,1,1,20,20);
-						System.out.println(ball.getX());
+						//Projectile ball = new Projectile(gc,1,1,20,20);
+						ball[0] = new Projectile(gc,10,10,30,20);
+						//System.out.println(ball.getX());
+
 					}
 
 					joueurs[i].stayInField(); //garde les joueurs dans le field
 					joueurs[i].goodSideArrow(); //garde la fleche du bon côté
 	        		
 	        		joueurs[i].display();
+
 	    	    }
+				if (ball[0] != null){
+					ball[0].display();
+				}
+
 				//System.out.println(joueurs[0].getAngle());
 				//System.out.println(joueurs[3].getX());
 

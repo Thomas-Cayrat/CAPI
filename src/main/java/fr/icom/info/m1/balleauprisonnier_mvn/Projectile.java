@@ -20,22 +20,32 @@ public class Projectile {
     GraphicsContext graphicsContext;
 
     Projectile(GraphicsContext gc, int s, int dir, int a, int b){
-        img = new Image("assets/ball.png");
+        this.img = new Image("assets/ball.png"); //crée image
         this.speed = s;
         this.direction = dir;
         graphicsContext = gc;
         this.x = a;
         this.y = b;
+
+
+        BallDirection = new ImageView();
+        BallDirection.setImage(img);
+        BallDirection.setFitWidth(10);
+        BallDirection.setPreserveRatio(true);
+        BallDirection.setSmooth(true);
+        BallDirection.setCache(true);
+
     }
+
 
     public int getX(){
         return x;
     }
 
-    void display()
+    public void display()
     {
         graphicsContext.save(); // saves the current state on stack, including the current transform
-        graphicsContext.drawImage(img, x, y);
+        graphicsContext.drawImage(img, this.x, this.y);
         graphicsContext.restore(); // back to original state (before rotation)
     }
 
