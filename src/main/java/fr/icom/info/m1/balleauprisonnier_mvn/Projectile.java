@@ -16,17 +16,20 @@ public class Projectile {
     double y;
     Image img;
 
+    String side;
+
     ImageView BallDirection;
 
     GraphicsContext graphicsContext;
 
-    Projectile(GraphicsContext gc, int s, double dir, double a, double b){
+    Projectile(GraphicsContext gc,String color, int s, double dir, double a, double b){
         this.img = new Image("assets/ball.png"); //crée image
         this.speed = s;
         this.directionRad = dir;
         graphicsContext = gc;
         this.x = a;
         this.y = b;
+        this.side = color;
 
 
         BallDirection = new ImageView();
@@ -51,9 +54,13 @@ public class Projectile {
     }
 
     public void update(){
-
-        this.x += Math.cos(this.directionRad) * this.speed;
-        this.y += Math.sin(this.directionRad) * this.speed;
+        if (this.side == "blue") {
+            this.x += Math.cos(this.directionRad) * this.speed;
+            this.y += Math.sin(this.directionRad) * this.speed;
+        }else{
+            this.x -= Math.cos(this.directionRad) * this.speed;
+            this.y -= Math.sin(this.directionRad) * this.speed;
+        }
     }
 }
 

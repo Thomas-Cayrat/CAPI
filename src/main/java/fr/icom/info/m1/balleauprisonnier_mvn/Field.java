@@ -150,6 +150,9 @@ public class Field extends Canvas {
 						joueurs[i].shoot();
 						joueurs[i + 4].shoot();
 						joueurs[i + 5].shoot();
+						ball[0] = new Projectile(gc,joueurs[i].playerColor,8,Math.toRadians(joueurs[i].getAngle()+90),joueurs[i].getX(),joueurs[i].getY());
+						System.out.println(joueurs[i].getAngle());
+						System.out.println(Math.toRadians(joueurs[i].getAngle()));
 					}
 	        		if (i==3 && input.contains("Q"))
 	        		{
@@ -176,7 +179,7 @@ public class Field extends Canvas {
 						joueurs[i-1].shoot();
 						joueurs[i-2].shoot();
 						//Projectile ball = new Projectile(gc,1,1,20,20);
-						ball[0] = new Projectile(gc,8,Math.toRadians(joueurs[i].getAngle()+90),joueurs[i].getX(),joueurs[i].getY());
+						ball[0] = new Projectile(gc,joueurs[i].playerColor,8,Math.toRadians(joueurs[i].getAngle()+90),joueurs[i].getX(),joueurs[i].getY());
 						System.out.println(joueurs[i].getAngle());
 						System.out.println(Math.toRadians(joueurs[i].getAngle()));
 
