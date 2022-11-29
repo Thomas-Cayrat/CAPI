@@ -176,8 +176,9 @@ public class Field extends Canvas {
 						joueurs[i-1].shoot();
 						joueurs[i-2].shoot();
 						//Projectile ball = new Projectile(gc,1,1,20,20);
-						ball[0] = new Projectile(gc,10,10,30,20);
-						//System.out.println(ball.getX());
+						ball[0] = new Projectile(gc,8,Math.toRadians(joueurs[i].getAngle()+90),joueurs[i].getX(),joueurs[i].getY());
+						System.out.println(joueurs[i].getAngle());
+						System.out.println(Math.toRadians(joueurs[i].getAngle()));
 
 					}
 
@@ -188,6 +189,7 @@ public class Field extends Canvas {
 
 	    	    }
 				if (ball[0] != null){
+					ball[0].update();
 					ball[0].display();
 				}
 

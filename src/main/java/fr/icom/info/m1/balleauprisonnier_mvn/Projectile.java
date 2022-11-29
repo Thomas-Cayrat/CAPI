@@ -10,19 +10,20 @@ import javafx.util.Duration;
 
 public class Projectile {
     int speed;
-    int direction;
-    int x;
-    int y;
+    double direction;
+    double directionRad = Math.toRadians(direction);
+    double x;
+    double y;
     Image img;
 
     ImageView BallDirection;
 
     GraphicsContext graphicsContext;
 
-    Projectile(GraphicsContext gc, int s, int dir, int a, int b){
+    Projectile(GraphicsContext gc, int s, double dir, double a, double b){
         this.img = new Image("assets/ball.png"); //crée image
         this.speed = s;
-        this.direction = dir;
+        this.directionRad = dir;
         graphicsContext = gc;
         this.x = a;
         this.y = b;
@@ -30,7 +31,7 @@ public class Projectile {
 
         BallDirection = new ImageView();
         BallDirection.setImage(img);
-        BallDirection.setFitWidth(10);
+        BallDirection.setFitWidth(5);
         BallDirection.setPreserveRatio(true);
         BallDirection.setSmooth(true);
         BallDirection.setCache(true);
@@ -38,7 +39,7 @@ public class Projectile {
     }
 
 
-    public int getX(){
+    public double getX(){
         return x;
     }
 
@@ -49,5 +50,10 @@ public class Projectile {
         graphicsContext.restore(); // back to original state (before rotation)
     }
 
+    public void update(){
+
+        this.x += Math.cos(this.directionRad) * this.speed;
+        this.y += Math.sin(this.directionRad) * this.speed;
+    }
 }
 
