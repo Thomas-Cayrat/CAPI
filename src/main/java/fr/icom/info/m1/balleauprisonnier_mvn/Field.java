@@ -71,7 +71,7 @@ public class Field extends Canvas {
 		teamBlue.add(joueurs[4]);
 		teamBlue.add(joueurs[5]);
 
-		Ball[0] = new Projectile(10,10,250,250);
+		Ball[0] = new Projectile(gc,10,10,250,250);
 
 	    /** 
 	     * Event Listener du clavier 
@@ -118,7 +118,7 @@ public class Field extends Canvas {
 	        public void handle(long currentNanoTime)
 	        {	 
 	            // On nettoie le canvas a chaque frame
-	            gc.setFill( Color.LIGHTGRAY);
+	            gc.setFill( Color.DARKSEAGREEN);
 	            gc.fillRect(0, 0, width, height);
 	        	
 	            // Deplacement et affichage des joueurs
@@ -173,7 +173,7 @@ public class Field extends Canvas {
 	        			joueurs[i].shoot();
 						joueurs[i-1].shoot();
 						joueurs[i-2].shoot();
-						Projectile ball = new Projectile(1,1,20,20);
+						Projectile ball = new Projectile(gc,1,1,20,20);
 						System.out.println(ball.getX());
 					}
 
