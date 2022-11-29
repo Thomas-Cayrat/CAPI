@@ -1,52 +1,34 @@
-You can read me!
+# CAPI
+
+CAPI est un jeu de Balle au Prisonnier multijoueur (1 contre 1).
+Codé depuis JavaFx dans le cadre d'un projet Universitaire.
+
+## Description
+
+CAPI se présente sous la forme d'un jeu de Balle au Prisonnier multijoueur (en cours de finition).
+Chaque équipe contient 1 joueur et 2 bots controlés par ordinateur.
+Les Joueurs étant un objet de la classe Player, contrôlés par l'utilisateur.
+Les ordinateurs ayant hérité de la classe Player avec seul modifications qu’ils sont contrôlés aléatoirement.
+Les joueurs peuvent se déplacer horizontalement (à une vitesse aléatoire fixée au lancement de l'application) 
+et contrôler l'angle de tir sur un arc de cercle de 180° devant le joueur.
+Prochainement, tirer la balle, la balle allant dans la direction du joueur, si en contact avec un joueur adverse : 
+receptionner ou se faire toucher par la balle.
+Ou encore un score des points du match et 
+un agencement du projet en pattern MVC avec un singleton pour créer les Joueurs et une Factory pour création des balles.
+
+## Installation
+
+Actuellement, CAPI est encore sous la forme d'un projet IntelliJ
+
+## Feuille de route
+
+Extensions possible pour le projet :
+ - Modification du nombre de joueurs par équipe
+ - Mettre une limite de point pour avoir une équipe vainqueur
+ - Une fenêtre de Menu contenant "Pause", "Réinitialiser la partie", "Réglage son", "Réglage FPS", "Quitter".
+ 
+ ## Auteurs et Remerciements
+ 
+Projet initialement de LACHAND-PASCAL Valentin, amélioré par ANTONY RAJAN Arun, CAYRAT Thomas et DEKKERS Eiko 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-elles sont ou les chattes la ??
-
-
-minouminouminounminouminou
